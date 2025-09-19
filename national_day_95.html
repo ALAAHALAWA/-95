@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تهنئة اليوم الوطني 95</title>
+  <style>
+    body {
+      background-color: #006c35; /* الأخضر الوطني */
+      color: white;
+      font-family: "Tajawal", sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      color: #006c35;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .logos {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .logos img {
+      max-height: 70px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 15px 0;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logos">
+      <img src="school_logo.jpg" alt="شعار المدرسة">
+      <img src="national_logo.png" alt="شعار عزنا بطبعنا">
+    </div>
+    <h1>تهنئة باليوم الوطني السعودي 95</h1>
+    <h2>أهلاً <span id="studentName">ضيفنا الكريم</span> 🎉</h2>
+    <p>نتمنى لك يوماً وطنياً سعيداً وفخراً بهذا الوطن المعطاء 🇸🇦</p>
+    <div class="footer">
+      مدارس نبراس القريات الأهلية
+    </div>
+  </div>
+
+  <script>
+    // جلب الاسم من الرابط ?name=الاسم
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    if(name) {
+      document.getElementById("studentName").textContent = name;
+    }
+  </script>
+</body>
+</html>
